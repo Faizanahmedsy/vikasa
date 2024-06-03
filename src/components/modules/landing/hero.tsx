@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import Wrapper from "@/components/wrapper";
 import React from "react";
+import KtyGrad01 from "@/components/kitty/gradiants/kty-grad-01";
 
 export default function Hero() {
   return (
     <>
-      <div className="h-[calc(100vh-100px)] flex justify-center items-center gap-4 px-32">
+      <KtyGrad01 />
+      <div className="h-[calc(100vh-100px)] flex justify-center items-center gap-4 px-32 z-10 relative">
         <div className="flex py-6">
           <div className="w-full flex justify-between flex-col">
             <h1 className="text-6xl font-bold">
