@@ -7,7 +7,7 @@ import Providers from "@/components/providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shaby Wear",
+  title: "Tomato Tech",
   description: "Created by Faizan",
 };
 

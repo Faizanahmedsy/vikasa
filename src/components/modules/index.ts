@@ -3,7 +3,6 @@ import Footer from "./footer";
 import { NavigationMenuDemo } from "./navbar-dropdown";
 import AboutSection from "./about-section";
 import ServicesSection from "./services-section";
-import HeroSection from "./hero-section";
 import ShowcaseSection from "./showcase-section";
 
 export {
@@ -12,6 +11,5 @@ export {
   NavigationMenuDemo,
   AboutSection,
   ServicesSection,
-  HeroSection,
   ShowcaseSection,
 };

@@ -49,7 +49,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between  md:px-32 px-8 py-5 fixed top-0 right-0 left-0 dark:bg-black bg-white z-50">
-      <div className="font-bold text-teal-700">Shaby Wear</div>
+      <div className="font-bold text-teal-700">Tomato Tech</div>
       <div className="flex items-center">
         <div className="hidden md:block">
           <NavigationMenuDemo />

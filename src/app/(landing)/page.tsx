@@ -1,14 +1,12 @@
-import { Hero } from "@/components/modules/landing";
+import { Banner, Categories, Hero, WhyUs } from "@/components/modules/landing";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      {/* <Categories />
+      <Categories />
       <Banner />
-      <TopSelling />
       <WhyUs />
-      <HeroFormCenterAlignedWithAForm /> */}
     </>
   );
 }

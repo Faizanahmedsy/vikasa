@@ -25,7 +25,7 @@ export default function Hero() {
               Databases, Functions, Storage, and Messaging to your projects
               using the frameworks and languages of your choice.
             </div>
-            <Button>Shop Now</Button>
+            <Button>View the projects</Button>
           </div>
         </div>
       </div>

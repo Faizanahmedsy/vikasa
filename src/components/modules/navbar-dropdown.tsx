@@ -75,7 +75,7 @@ export function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Shaby Wear
+                      Tomato Tech
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       We build stuff and make it look good while doing it.
