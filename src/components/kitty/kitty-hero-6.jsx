@@ -7,7 +7,7 @@ export default function HeroWithTwoCOlAndCTA() {
       <div className="container flex justify-center items-center min-h-screen">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center ">
-          <div>
+          <div className="bg-blue-950">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl py-6">
               CloudMaster: Elevate Your Projects
             </h1>
