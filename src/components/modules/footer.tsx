@@ -1,4 +1,5 @@
 import React from "react";
+import { SITE_CONFIG } from "../../../site.config";
 
 const Footer = () => {
   return (
@@ -64,7 +65,8 @@ const Footer = () => {
       </div>
 
       <div className="mt-8 text-center text-gray-500">
-        &copy; {new Date().getFullYear()} Tomato Tech. All rights reserved.
+        &copy; {new Date().getFullYear()} {SITE_CONFIG.brandName}. All rights
+        reserved.
       </div>
     </footer>
   );

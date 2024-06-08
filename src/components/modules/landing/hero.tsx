@@ -1,12 +1,10 @@
+import TextV3 from "@/components/shared/textv3";
 import { Button } from "@/components/ui/button";
-import Wrapper from "@/components/wrapper";
-import React from "react";
-import KtyGrad01 from "@/components/kitty/gradiants/kty-grad-01";
 
 export default function Hero() {
   return (
     <>
-      <KtyGrad01 />
+      <div className="absolute inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"></div>
       <div className="h-[calc(100vh-100px)] flex justify-center items-center gap-4 px-32 z-10 relative">
         <div className="flex py-6">
           <div className="w-full flex justify-between flex-col">
@@ -19,12 +17,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="w-full space-y-5 px-6">
-            <div className="font-medium text-2xl">
+            <TextV3>
               Build your entire backend within minutes and scale effortlessly
               using Appwrite&apos;s open-source platform. Add Authentication,
               Databases, Functions, Storage, and Messaging to your projects
               using the frameworks and languages of your choice.
-            </div>
+            </TextV3>
             <Button>View the projects</Button>
           </div>
         </div>

@@ -16,6 +16,7 @@ import { usePathname } from "next/navigation";
 import { Icons } from "../icons";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { SITE_CONFIG } from "../../../site.config";
 
 export const companyNavItems: any = [
   {
@@ -49,12 +50,12 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between  md:px-32 px-8 py-5 fixed top-0 right-0 left-0 dark:bg-black bg-white z-50">
-      <div className="font-bold text-teal-700">Tomato Tech</div>
+      <div className="font-bold text-teal-700">{SITE_CONFIG.brandName}</div>
       <div className="flex items-center">
         <div className="hidden md:block">
           <NavigationMenuDemo />
         </div>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
 
         <div className={cn("block sm:!hidden")}>
           <Sheet open={open} onOpenChange={setOpen}>

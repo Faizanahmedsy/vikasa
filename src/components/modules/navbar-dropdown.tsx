@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { SITE_CONFIG } from "../../../site.config";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -75,7 +76,7 @@ export function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Tomato Tech
+                      {SITE_CONFIG.brandName}
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       We build stuff and make it look good while doing it.

@@ -1,19 +1,22 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { SITE_CONFIG } from "../../../site.config";
 
 const FooterV3 = () => {
   return (
     <footer className="py-12 bg-brand-primary text-violet-200">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between ">
         <div className="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-          <h2 className="text-3xl font-bold text-white mb-2">Tomato Tech</h2>
+          <h2 className="text-3xl font-bold text-white mb-2">
+            {SITE_CONFIG.brandName}
+          </h2>
           <p className="text-sm">Building a Sustainable Future</p>
         </div>
 
         <div className="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
           <h3 className="text-lg font-bold text-white mb-3">Contact Us</h3>
           <p className="text-sm">+91 9876543210</p>
-          <p className="text-sm">info@tomatotech.com</p>
+          <p className="text-sm">{SITE_CONFIG.contact.email}</p>
         </div>
 
         <div className="flex flex-col items-center lg:items-start">
@@ -66,7 +69,8 @@ const FooterV3 = () => {
       </div>
 
       <div className="mt-8 text-center text-white">
-        &copy; {new Date().getFullYear()} Tomato Tech. All rights reserved.
+        &copy; {new Date().getFullYear()} {SITE_CONFIG.brandName}. All rights
+        reserved.
       </div>
     </footer>
   );

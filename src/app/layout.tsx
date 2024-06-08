@@ -3,11 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "./custom.css";
 import Providers from "@/components/providers";
+import { SITE_CONFIG } from "../../site.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tomato Tech",
+  title: SITE_CONFIG.brandName,
   description: "Created by Faizan",
 };
 
