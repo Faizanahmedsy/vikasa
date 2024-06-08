@@ -1,14 +1,18 @@
+import HeroFormCenterAlignedWithAForm from "@/components/kitty/kitty-cta";
 import { Banner, Categories, Hero, WhyUs } from "@/components/modules/landing";
 import Intro from "@/components/modules/landing/intro";
+import Testimonials from "@/components/modules/landing/testimonials";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <Intro />
-      <Categories />
-      <Banner />
       <WhyUs />
+      <Categories />
+      <Testimonials />
+      <HeroFormCenterAlignedWithAForm />
+      {/* <Banner /> */}
     </>
   );
 }

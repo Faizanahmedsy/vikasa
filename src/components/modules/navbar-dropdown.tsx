@@ -54,18 +54,60 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const NavItems = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About Us",
+    href: "/about",
+  },
+  // {
+  //   title: "Services",
+  //   href: "/services",
+  // },
+  // {
+  //   title: "Projects",
+  //   href: "/projects",
+  // },
+  // {
+  //   title: "Testimonials",
+  //   href: "/testimonials",
+  // },
+  // {
+  //   title: "Blog/News",
+  //   href: "/blogs",
+  // },
+  // {
+  //   title: "Careers",
+  //   href: "/careers",
+  // },
+  {
+    title: "Contact Us",
+    href: "/contact",
+  },
+  // {
+  //   title: "FAQ",
+  //   href: "/faq",
+  // },
+];
+
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Home
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
+        {NavItems.map((item) => (
+          <NavigationMenuItem key={item.title}>
+            <Link href={item.href} passHref legacyBehavior>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {item.title}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        ))}
+
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -95,8 +137,8 @@ export function NavigationMenuDemo() {
               </ListItem>
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
+        </NavigationMenuItem> */}
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -111,22 +153,7 @@ export function NavigationMenuDemo() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Careers
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact Us
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );

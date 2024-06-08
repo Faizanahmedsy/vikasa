@@ -4,7 +4,7 @@ import { SITE_CONFIG } from "../../../site.config";
 
 const FooterV3 = () => {
   return (
-    <footer className="py-12 bg-brand-primary text-violet-200">
+    <footer className="py-12 bg-slate-900 text-violet-200">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between ">
         <div className="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
           <h2 className="text-3xl font-bold text-white mb-2">
