@@ -1,22 +1,26 @@
 import { cn } from "@/lib/utils";
 
-const cardContent = {
-  title: "Lorem ipsum dolor",
-  description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, hic ipsum! Qui dicta debitis aliquid quo molestias explicabo iure!",
-};
-const CardBody = ({ className = "p-4" }) => (
+const CardBody = ({
+  className = "p-4",
+  data,
+}: {
+  className?: string;
+  data: { title: string; description: string };
+}) => (
   <div className={cn("text-left", className)}>
     <h3 className="text-lg font-bold mb-1 text-gray-900 dark:text-gray-100">
-      {cardContent.title}
+      {data.title}
     </h3>
-    <p className="text-gray-700 dark:text-gray-300">
-      {cardContent.description}
-    </p>
+    <p className="text-gray-700 dark:text-gray-300">{data.description}</p>
   </div>
 );
 //======================================
-export const SimpleCard_V1 = () => {
+export const SimpleCard_V1 = ({
+  data,
+}: {
+  data: { title: string; description: string };
+}) => {
+  console.log("data");
   const Icon = ({ className, ...rest }: any) => {
     return (
       <svg
@@ -41,7 +45,7 @@ export const SimpleCard_V1 = () => {
         <Icon className="-top-3 -right-3" />
         <Icon className="-bottom-3 -left-3" />
         <Icon className="-bottom-3 -right-3" />
-        <CardBody className="p-6" />
+        <CardBody className="p-6" data={data} />
       </div>
     </div>
   );

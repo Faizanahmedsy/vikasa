@@ -1,5 +1,8 @@
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
+import SparklesText from "@/components/magicui/sparkles-text";
 import TextV3 from "@/components/shared/textv3";
 import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -9,7 +12,10 @@ export default function Hero() {
         <div className="flex py-6">
           <div className="w-full flex justify-between flex-col">
             <h1 className="text-6xl font-bold">
-              Build like a team of hundreds_
+              Build like a team of hundreds with
+              <span>
+                <SparklesText text="Vikasa" />
+              </span>
             </h1>
             <div className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
@@ -23,7 +29,13 @@ export default function Hero() {
               Databases, Functions, Storage, and Messaging to your projects
               using the frameworks and languages of your choice.
             </TextV3>
-            <Button>View the projects</Button>
+            <div className="flex gap-4 ">
+              <Button>View the projects</Button>
+              <AnimatedShinyText className="inline-flex items-center justify-start px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                <span>✨ Introducing New Services</span>
+                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              </AnimatedShinyText>
+            </div>
           </div>
         </div>
       </div>

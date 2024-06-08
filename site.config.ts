@@ -1,5 +1,5 @@
 export const SITE_CONFIG = Object.freeze({
-  brandName: "Tomato Tech",
+  brandName: "Vikasa",
   title: "My Site",
   description: "My site description",
   contact: {
