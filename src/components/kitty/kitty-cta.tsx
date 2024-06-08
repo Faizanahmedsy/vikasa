@@ -1,9 +1,54 @@
+"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useMutation } from "@tanstack/react-query";
+import { useRef, useState } from "react";
+import { toast } from "sonner";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function HeroFormCenterAlignedWithAForm() {
+  const [msg, setMsg] = useState("");
+
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+
+  const token = "6801125870:AAHwsn1kiU5wHs3gN_JER-sbbMevT-mYw0s";
+
+  const telegramApi = useMutation({
+    mutationFn: async (data: { chat_id: string; text: string }) => {
+      const response = await fetch(
+        `https://api.telegram.org/${token}/sendMessage`,
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    },
+    onSuccess: (data) => {
+      console.log(data);
+      toast.success("Message sent successfully");
+    },
+  });
+
+  const handleSubmit = () => {
+    console.log(nameRef.current?.value);
+    console.log(emailRef.current?.value);
+
+    telegramApi.mutate({
+      chat_id: "-1002128891802",
+      text: `Name: ${nameRef.current?.value} Email: ${emailRef.current?.value} Message: ${msg}`,
+    });
+  };
+
   return (
     <>
       {/* Hero */}
@@ -13,10 +58,10 @@ export default function HeroFormCenterAlignedWithAForm() {
             {/* Title */}
             <div className="text-center">
               <p className="text-xs font-semibold text-muted-foreground tracking-wide uppercase mb-3">
-                Small business solutions
+                Lets join hands
               </p>
               <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-                Turn online shoppers into lifetime customers
+                Turn your idea into a business
               </h1>
             </div>
             {/* End Title */}
@@ -72,12 +117,24 @@ export default function HeroFormCenterAlignedWithAForm() {
             {/* End Avatar Group */}
             {/* Form */}
             <form>
-              <div className="mx-auto max-w-2xl sm:flex sm:space-x-3 p-3 border rounded-lg shadow-lg shadow-primary-foreground ">
+              <div className="max-w-2xl mx-auto">
+                <Textarea
+                  placeholder="Your Message"
+                  onChange={(e) => setMsg(e.target.value)}
+                />
+              </div>
+              <div className="mx-auto max-w-2xl  sm:flex sm:space-x-3 p-3 border rounded-lg shadow-lg shadow-primary-foreground ">
                 <div className="pb-2 sm:pb-0 sm:flex-[1_0_0%]">
                   <Label htmlFor="name">
                     <span className="sr-only">Your name</span>
                   </Label>
-                  <Input type="text" id="name" placeholder="Your name" />
+                  <Input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    ref={nameRef}
+                    onChange={(e) => console.log(e.target.value)}
+                  />
                 </div>
                 <div className="pt-2 sm:pt-0 sm:ps-3 border-t sm:border-t-0 sm:border-s sm:flex-[1_0_0%]">
                   <Label
@@ -86,10 +143,17 @@ export default function HeroFormCenterAlignedWithAForm() {
                   >
                     <span className="sr-only">Your email address</span>
                   </Label>
-                  <Input type="email" id="email" placeholder="Your email" />
+                  <Input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    ref={emailRef}
+                    onChange={(e) => console.log(e.target.value)}
+                  />
                 </div>
+
                 <div className="pt-2 sm:pt-0 grid sm:block sm:flex-[0_0_auto]">
-                  <Button>Get started</Button>
+                  <Button onClick={handleSubmit}>Get started</Button>
                 </div>
               </div>
             </form>
