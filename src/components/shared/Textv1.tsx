@@ -9,7 +9,12 @@ export default function TextV1({
   className?: string;
 }) {
   return (
-    <div className={cn("md:text-6xl text-2xl font-medium", className)}>
+    <div
+      className={cn(
+        "md:text-6xl text-2xl font-medium text-blue-900",
+        className
+      )}
+    >
       {children}
     </div>
   );

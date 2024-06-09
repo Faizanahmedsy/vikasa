@@ -86,7 +86,7 @@ export default function Categories() {
 
   return (
     <div className="py-12">
-      <H2 className="text-center pb-12">We offer</H2>
+      <H2 className="text-center pb-12">We offer a wide range of services</H2>
       <div>
         <BentoGrid className="max-w-[82rem] mx-auto">
           {items.map((item, i) => (

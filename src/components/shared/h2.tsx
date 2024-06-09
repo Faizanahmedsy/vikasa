@@ -9,7 +9,7 @@ export default function H2({
   className?: string;
 }) {
   return (
-    <div className={cn("text-4xl font-semibold text-blue-900 p-2", className)}>
+    <div className={cn("text-4xl font-extrabold text-blue-900 p-2", className)}>
       {children}
     </div>
   );

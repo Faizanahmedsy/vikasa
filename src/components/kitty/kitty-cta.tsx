@@ -60,7 +60,7 @@ export default function HeroFormCenterAlignedWithAForm() {
               <p className="text-xs font-semibold text-muted-foreground tracking-wide uppercase mb-3">
                 Lets join hands
               </p>
-              <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-blue-900">
                 Turn your idea into a business
               </h1>
             </div>
@@ -117,7 +117,7 @@ export default function HeroFormCenterAlignedWithAForm() {
             {/* End Avatar Group */}
             {/* Form */}
             <div>
-              <div className="max-w-2xl">
+              <div className="max-w-2xl mx-auto">
                 <Textarea
                   placeholder="Your Message"
                   onChange={(e) => setMsg(e.target.value)}

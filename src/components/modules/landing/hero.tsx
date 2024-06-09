@@ -13,7 +13,9 @@ export default function Hero() {
           <div className="w-full flex justify-between flex-col">
             <h1 className="md:text-6xl text-4xl font-bold">
               Build like a team of hundreds with
-              <span>{/* <SparklesText text="Vikasa" /> */}</span>
+              <span>
+                <SparklesText text="Vikasa" />
+              </span>
             </h1>
             <div className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
@@ -23,7 +25,7 @@ export default function Hero() {
           <div className="w-full space-y-5 lg:px-6 py-10 md:py-0">
             <TextV3>
               Build your entire backend within minutes and scale effortlessly
-              using Appwrite&apos;s open-source platform. Add Authentication,
+              using Vikasa&apos;s open-source platform. Add Authentication,
               Databases, Functions, Storage, and Messaging to your projects
               using the frameworks and languages of your choice.
             </TextV3>
