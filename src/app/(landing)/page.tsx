@@ -10,9 +10,9 @@ export default function HomePage() {
       <Hero />
       <Intro />
       <WhyUs />
-      {/* <Categories /> */}
-      {/* <Testimonials /> */}
-      {/* <HeroFormCenterAlignedWithAForm /> */}
+      <Categories />
+      <Testimonials />
+      <HeroFormCenterAlignedWithAForm />
     </>
   );
 }

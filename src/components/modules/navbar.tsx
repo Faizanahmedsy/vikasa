@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { NavigationMenuDemo } from "./navbar-dropdown";
+import { NavItems, NavigationMenuDemo } from "./navbar-dropdown";
 import { ThemeToggle } from "../theme-toggle";
 import {
   Sheet,
@@ -71,7 +71,7 @@ export default function Navbar() {
                     Overview
                   </h2>
                   <div className="space-y-1">
-                    <DashboardNav items={companyNavItems} setOpen={setOpen} />
+                    <DashboardNav items={NavItems} setOpen={setOpen} />
                   </div>
                 </div>
               </div>

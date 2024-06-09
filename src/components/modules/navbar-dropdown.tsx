@@ -54,7 +54,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-const NavItems = [
+export const NavItems = [
   {
     title: "Home",
     href: "/",
