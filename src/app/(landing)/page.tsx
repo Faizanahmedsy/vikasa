@@ -8,12 +8,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Intro />
+      {/* <Intro />
       <WhyUs />
       <Categories />
       <Testimonials />
-      <HeroFormCenterAlignedWithAForm />
-      {/* <Banner /> */}
+      <HeroFormCenterAlignedWithAForm /> */}
     </>
   );
 }

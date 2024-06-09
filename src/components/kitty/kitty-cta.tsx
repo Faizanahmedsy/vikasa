@@ -116,43 +116,45 @@ export default function HeroFormCenterAlignedWithAForm() {
             </div>
             {/* End Avatar Group */}
             {/* Form */}
-            <div className="max-w-2xl mx-auto">
-              <Textarea
-                placeholder="Your Message"
-                onChange={(e) => setMsg(e.target.value)}
-              />
-            </div>
-            <div className="mx-auto max-w-2xl  sm:flex sm:space-x-3 p-3 border rounded-lg shadow-lg shadow-primary-foreground ">
-              <div className="pb-2 sm:pb-0 sm:flex-[1_0_0%]">
-                <Label htmlFor="name">
-                  <span className="sr-only">Your name</span>
-                </Label>
-                <Input
-                  type="text"
-                  id="name"
-                  placeholder="Your name"
-                  ref={nameRef}
-                  onChange={(e) => console.log(e.target.value)}
+            <div>
+              <div className="max-w-2xl">
+                <Textarea
+                  placeholder="Your Message"
+                  onChange={(e) => setMsg(e.target.value)}
                 />
               </div>
-              <div className="pt-2 sm:pt-0 sm:ps-3 border-t sm:border-t-0 sm:border-s sm:flex-[1_0_0%]">
-                <Label
-                  htmlFor="email"
-                  className="block text-sm font-medium dark:text-white"
-                >
-                  <span className="sr-only">Your email address</span>
-                </Label>
-                <Input
-                  type="email"
-                  id="email"
-                  placeholder="Your email"
-                  ref={emailRef}
-                  onChange={(e) => console.log(e.target.value)}
-                />
-              </div>
+              <div className="mx-auto max-w-2xl  sm:flex sm:space-x-3 p-3 border rounded-lg shadow-lg shadow-primary-foreground ">
+                <div className="pb-2 sm:pb-0 sm:flex-[1_0_0%]">
+                  <Label htmlFor="name">
+                    <span className="sr-only">Your name</span>
+                  </Label>
+                  <Input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    ref={nameRef}
+                    onChange={(e) => console.log(e.target.value)}
+                  />
+                </div>
+                <div className="pt-2 sm:pt-0 sm:ps-3 border-t sm:border-t-0 sm:border-s sm:flex-[1_0_0%]">
+                  <Label
+                    htmlFor="email"
+                    className="block text-sm font-medium dark:text-white"
+                  >
+                    <span className="sr-only">Your email address</span>
+                  </Label>
+                  <Input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    ref={emailRef}
+                    onChange={(e) => console.log(e.target.value)}
+                  />
+                </div>
 
-              <div className="pt-2 sm:pt-0 grid sm:block sm:flex-[0_0_auto]">
-                <Button onClick={handleSubmit}>Get started</Button>
+                <div className="pt-2 sm:pt-0 grid sm:block sm:flex-[0_0_auto]">
+                  <Button onClick={handleSubmit}>Get started</Button>
+                </div>
               </div>
             </div>
             {/* End Form */}
