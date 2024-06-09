@@ -8,5 +8,7 @@ export default function TextV4({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={cn("text-xl font-medium", className)}>{children}</div>;
+  return (
+    <div className={cn("md:text-xl font-medium", className)}>{children}</div>
+  );
 }

@@ -8,5 +8,9 @@ export default function Wrapper({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={cn(" py-10 px-32", className)}>{children}</div>;
+  return (
+    <div className={cn(" md:py-10 md:px-32 px-10 py-5", className)}>
+      {children}
+    </div>
+  );
 }

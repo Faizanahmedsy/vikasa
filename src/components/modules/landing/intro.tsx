@@ -5,12 +5,12 @@ import Wrapper from "@/components/wrapper";
 
 export default function Intro() {
   return (
-    <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center">
+    <div className="md:h-96 h-[70%] relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center">
       <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
       <Boxes />
       <Wrapper>
-        <TextV4 className="text-white">
+        <TextV4 className="text-white w-full">
           At {SITE_CONFIG.brandName}, we are dedicated to delivering top-notch
           service solutions tailored to meet the unique needs of our clients.
           With a strong foundation in innovation, quality, and customer

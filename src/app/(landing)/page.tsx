@@ -8,8 +8,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      {/* <Intro />
-      <WhyUs />
+      <Intro />
+      {/* <WhyUs />
       <Categories />
       <Testimonials />
       <HeroFormCenterAlignedWithAForm /> */}
