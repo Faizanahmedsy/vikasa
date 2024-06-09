@@ -28,11 +28,13 @@ export default function Hero() {
               using the frameworks and languages of your choice.
             </TextV3>
             <div className="md:flex gap-4">
-              <Button className="w-full sm:w-auto">View the projects</Button>
-              <AnimatedShinyText className="inline-flex items-center justify-start px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-                <span>✨ Introducing New Services</span>
-                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-              </AnimatedShinyText>
+              <Button className="w-full md:w-auto">View the projects</Button>
+              <div className="flex justify-center items-center">
+                <AnimatedShinyText className="inline-flex items-center justify-start px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                  <span>✨ Introducing New Services</span>
+                  <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                </AnimatedShinyText>
+              </div>
             </div>
           </div>
         </div>
