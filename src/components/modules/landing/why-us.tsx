@@ -6,7 +6,7 @@ import { IconCloudDemo } from "./tech-cloud";
 const WhyUs = () => {
   return (
     <Wrapper>
-      <div className="grid md:grid-cols-2 p-14 gap-20">
+      <div className="grid md:grid-cols-2 md:p-14 gap-20">
         <div>
           <IconCloudDemo />
         </div>
