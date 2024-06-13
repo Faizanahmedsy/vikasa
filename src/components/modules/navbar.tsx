@@ -1,23 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from "react";
 import { NavItems, NavigationMenuDemo } from "./navbar-dropdown";
-import { ThemeToggle } from "../theme-toggle";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { MenuIcon } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { Icons } from "../icons";
-import Link from "next/link";
+
 import { cn } from "@/lib/utils";
+import { MenuIcon } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE_CONFIG } from "../../../site.config";
-import SparklesText from "../magicui/sparkles-text";
+import { Icons } from "../icons";
+import MobileMenuDrawer from "./landing/mobile-menu-drawer";
 
 export const companyNavItems: any = [
   {
@@ -58,7 +51,9 @@ export default function Navbar() {
           <NavigationMenuDemo />
         </div>
         {/* <ThemeToggle /> */}
-
+        <div className={cn("block sm:!hidden")}>
+          <MobileMenuDrawer />
+        </div>
         <div className={cn("block sm:!hidden")}>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -67,9 +62,6 @@ export default function Navbar() {
             <SheetContent side="left" className="!px-0">
               <div className="space-y-4 py-4">
                 <div className="px-3 py-2">
-                  <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
-                    Overview
-                  </h2>
                   <div className="space-y-1">
                     <DashboardNav items={NavItems} setOpen={setOpen} />
                   </div>

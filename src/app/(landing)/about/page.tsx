@@ -1,5 +1,6 @@
 import TextV1 from "@/components/shared/Textv1";
 import H2 from "@/components/shared/h2";
+import { SimpleCard } from "@/components/shared/simple-card";
 import TextV3 from "@/components/shared/textv3";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { SimpleCard_V1 } from "@/components/ui/card_v1";
@@ -180,13 +181,3 @@ export default function AboutUSPage() {
     </>
   );
 }
-
-const SimpleCard = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return <div className="border p-3 rounded-lg">{children}</div>;
-};
