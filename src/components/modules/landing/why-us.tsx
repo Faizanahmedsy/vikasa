@@ -7,7 +7,7 @@ const WhyUs = () => {
   return (
     <Wrapper>
       <div className="grid md:grid-cols-2 md:p-14 gap-20">
-        <div>
+        <div className="hidden md:block">
           <IconCloudDemo />
         </div>
         <div className="flex flex-col gap-6">
