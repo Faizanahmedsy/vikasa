@@ -2,16 +2,33 @@
 
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { SectionTitle } from "@/components/shared";
 
 export default function Testimonials() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-slate-900 dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
-    </div>
+    <>
+      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-slate-900 dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        {/* DESKTOP && TABLET VIEW  */}
+        <SectionTitle
+          mode="light"
+          className="absolute top-[60px] hidden md:block"
+        >
+          What Our Clients Say
+        </SectionTitle>
+        {/* MOBILE VIEW  */}
+        <SectionTitle
+          mode="light"
+          className="absolute px-10 top-[30px] block md:hidden"
+        >
+          What Our <br /> Clients Say
+        </SectionTitle>
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
+      </div>
+    </>
   );
 }
 

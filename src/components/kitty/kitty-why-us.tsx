@@ -33,7 +33,7 @@ const KittyWhyUs = () => {
             alt="Shopping Bags"
           />
           <div>
-            <h2 className="font-semibold text-xl md:text-2xl-">Achievements</h2>
+            <h2 className="font-semibold text-xl md:text-2xl">Achievements</h2>
 
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.

@@ -12,3 +12,7 @@ export const SITE_CONFIG = Object.freeze({
     accent: "",
   },
 });
+
+export const HERO = Object.freeze({
+  title: `Build like a team of hundreds with ${SITE_CONFIG.brandName}`,
+} as const);

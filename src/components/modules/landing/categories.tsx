@@ -1,5 +1,7 @@
+import { SectionTitle } from "@/components/shared";
 import H2 from "@/components/shared/h2";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import Wrapper from "@/components/wrapper";
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
@@ -85,23 +87,21 @@ export default function Categories() {
   ];
 
   return (
-    <div className="">
-      <H2 className="text-center">We offer a wide range of services</H2>
-      <div>
-        <BentoGrid className="max-w-[82rem] mx-auto p-5">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              icon={item.icon}
-              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-            />
-          ))}
-        </BentoGrid>
-      </div>
-    </div>
+    <Wrapper>
+      <SectionTitle>We offer a wide range of services</SectionTitle>
+      <BentoGrid className="max-w-[82rem] mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+      </BentoGrid>
+    </Wrapper>
   );
 }
 
