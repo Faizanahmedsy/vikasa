@@ -11,12 +11,12 @@ export default function AboutUSPage() {
     {
       title: "Our Mission",
       description:
-        "lorem  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "To provide innovative and customized IT solutions that empower businesses to thrive in the digital world. We strive to deliver excellence through a team of skilled professionals and cutting-edge technology.",
     },
     {
       title: "Our Vision",
       description:
-        "lorem  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "To be a leading IT service provider, recognized globally for our commitment to quality, customer satisfaction, and technological innovation. We aim to create lasting value for our clients and partners.",
     },
   ];
 
@@ -24,9 +24,8 @@ export default function AboutUSPage() {
     <>
       <Wrapper>
         <TextV1 className="leading-2 tracking-tight">
-          Here at Vikasa, we believe in teamwork and creativity. Our team works
-          together to create apps and websites that add meaning to your
-          business.
+          At Vikasa, we specialize in delivering top-notch IT services. Our team
+          is dedicated to helping businesses succeed in the digital age.
         </TextV1>
         <div className="grid md:grid-cols-2 my-10">
           {data.map((item, index) => (
@@ -34,11 +33,10 @@ export default function AboutUSPage() {
               <SimpleCard_V1 data={item} />
             </div>
           ))}
-          {/* <SimpleCard_V1 /> */}
         </div>
         <section>
           <div className="text-center">
-            <H2>We are a team of masterminds</H2>
+            <H2>Meet Our Expert Team</H2>
           </div>
           <div className="grid md:grid-cols-4 my-10 gap-4">
             {Array.from({ length: 4 }).map((_, index) => (
@@ -50,8 +48,8 @@ export default function AboutUSPage() {
                 />
                 <CardContent>
                   <CardDescription className="pt-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cupiditate, fugit!
+                    Our team consists of experienced professionals passionate
+                    about delivering high-quality IT services to our clients.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -84,14 +82,14 @@ export default function AboutUSPage() {
               </div>
               <div className="mt-3 sm:pe-8">
                 <h3 className="text-lg font-semibold text-white dark:text-white">
-                  lorem ipsum foo foo
+                  Launch of Our First Product
                 </h3>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                   Released on December 2, 2021
                 </time>
                 <p className="text-base font-normal text-gray-300 dark:text-gray-400">
-                  Get started with dozens of web components and interactive
-                  elements.
+                  Our journey began with the launch of our first innovative
+                  software solution, setting the stage for our future growth.
                 </p>
               </div>
             </li>
@@ -112,14 +110,14 @@ export default function AboutUSPage() {
               </div>
               <div className="mt-3 sm:pe-8">
                 <h3 className="text-lg font-semibold text-white">
-                  lorem ipsum foo foo
+                  Expansion into New Markets
                 </h3>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                   Released on December 23, 2021
                 </time>
                 <p className="text-base font-normal text-gray-300 dark:text-gray-400">
-                  Get started with dozens of web components and interactive
-                  elements.
+                  We expanded our services into new markets, broadening our
+                  reach and capabilities.
                 </p>
               </div>
             </li>
@@ -140,14 +138,14 @@ export default function AboutUSPage() {
               </div>
               <div className="mt-3 sm:pe-8">
                 <h3 className="text-lg font-semibold text-white">
-                  lorem ipsum foo foo
+                  Recognition & Awards
                 </h3>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                   Released on January 5, 2022
                 </time>
                 <p className="text-base font-normal text-gray-300 dark:text-gray-400">
-                  Get started with dozens of web components and interactive
-                  elements.
+                  Our company received several awards for excellence in IT
+                  services and customer satisfaction.
                 </p>
               </div>
             </li>
@@ -162,10 +160,9 @@ export default function AboutUSPage() {
           </div>
           <div className="my-10">
             <TextV3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              At Vikasa, we foster a culture of innovation and collaboration.
+              Our team enjoys a dynamic work environment where creativity and
+              professional growth are highly valued.
             </TextV3>
 
             <div className="grid md:grid-cols-4 py-10 gap-4">

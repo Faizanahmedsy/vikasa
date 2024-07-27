@@ -42,50 +42,55 @@ export default function Categories() {
 
   const items = [
     {
-      title: "The Dawn of Innovation",
-      description: "Explore the birth of groundbreaking ideas and inventions.",
+      title: "Frontend web development",
+      description:
+        "Delve into building engaging and interactive user interfaces for the web.",
       header: <Skeleton />,
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Digital Revolution",
-      description: "Dive into the transformative power of technology.",
+      title: "Backend web development",
+      description:
+        "Explore server-side technologies and databases to power robust applications.",
       header: <Skeleton />,
       icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Art of Design",
-      description: "Discover the beauty of thoughtful and functional design.",
+      title: "UI/UX design",
+      description:
+        "Focus on crafting user-centered designs to enhance the overall experience.",
       header: <Skeleton />,
       icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Power of Communication",
+      title: "AI & Machine Learning",
       description:
-        "Understand the impact of effective communication in our lives.",
+        "Uncover how artificial intelligence and machine learning are transforming industries.",
       header: <Skeleton />,
       icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Pursuit of Knowledge",
-      description: "Join the quest for understanding and enlightenment.",
+      title: "Data Analytics",
+      description:
+        "Learn to analyze and interpret complex data to drive decision-making and strategy.",
       header: <Skeleton />,
       icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Joy of Creation",
-      description: "Experience the thrill of bringing ideas to life.",
+      title: "IOS Development",
+      description:
+        "Master the skills needed to create applications for Apple's iOS platform.",
       header: <Skeleton />,
       icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Spirit of Adventure",
-      description: "Embark on exciting journeys and thrilling discoveries.",
+      title: "Android Development",
+      description:
+        "Develop expertise in building applications for the Android ecosystem.",
       header: <Skeleton />,
       icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
     },
   ];
-
   return (
     <Wrapper>
       <SectionTitle>We offer a wide range of services</SectionTitle>
