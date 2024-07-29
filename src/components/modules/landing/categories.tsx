@@ -1,5 +1,7 @@
+import { SectionTitle } from "@/components/shared";
 import H2 from "@/components/shared/h2";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import Wrapper from "@/components/wrapper";
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
@@ -40,68 +42,71 @@ export default function Categories() {
 
   const items = [
     {
-      title: "The Dawn of Innovation",
-      description: "Explore the birth of groundbreaking ideas and inventions.",
+      title: "Frontend web development",
+      description:
+        "Delve into building engaging and interactive user interfaces for the web.",
       header: <Skeleton />,
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Digital Revolution",
-      description: "Dive into the transformative power of technology.",
+      title: "Backend web development",
+      description:
+        "Explore server-side technologies and databases to power robust applications.",
       header: <Skeleton />,
       icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Art of Design",
-      description: "Discover the beauty of thoughtful and functional design.",
+      title: "UI/UX design",
+      description:
+        "Focus on crafting user-centered designs to enhance the overall experience.",
       header: <Skeleton />,
       icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Power of Communication",
+      title: "AI & Machine Learning",
       description:
-        "Understand the impact of effective communication in our lives.",
+        "Uncover how artificial intelligence and machine learning are transforming industries.",
       header: <Skeleton />,
       icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Pursuit of Knowledge",
-      description: "Join the quest for understanding and enlightenment.",
+      title: "Data Analytics",
+      description:
+        "Learn to analyze and interpret complex data to drive decision-making and strategy.",
       header: <Skeleton />,
       icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Joy of Creation",
-      description: "Experience the thrill of bringing ideas to life.",
+      title: "IOS Development",
+      description:
+        "Master the skills needed to create applications for Apple's iOS platform.",
       header: <Skeleton />,
       icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Spirit of Adventure",
-      description: "Embark on exciting journeys and thrilling discoveries.",
+      title: "Android Development",
+      description:
+        "Develop expertise in building applications for the Android ecosystem.",
       header: <Skeleton />,
       icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
     },
   ];
-
   return (
-    <div className="">
-      <H2 className="text-center">We offer a wide range of services</H2>
-      <div>
-        <BentoGrid className="max-w-[82rem] mx-auto p-5">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              icon={item.icon}
-              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-            />
-          ))}
-        </BentoGrid>
-      </div>
-    </div>
+    <Wrapper>
+      <SectionTitle>We offer a wide range of services</SectionTitle>
+      <BentoGrid className="max-w-[82rem] mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+      </BentoGrid>
+    </Wrapper>
   );
 }
 

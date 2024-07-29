@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Wrapper from "@/components/wrapper";
 import { IconCloudDemo } from "./tech-cloud";
+import { SectionTitle } from "@/components/shared";
 
 const WhyUs = () => {
   return (
     <Wrapper>
-      <div className="grid md:grid-cols-2 md:p-14 gap-20">
+      <SectionTitle>Why Choose Vikasa?</SectionTitle>
+      <div className="grid md:grid-cols-2 gap-20">
         <div className="hidden md:block">
           <IconCloudDemo />
         </div>
@@ -16,17 +18,15 @@ const WhyUs = () => {
               src="https://api.iconify.design/fluent-emoji/alarm-clock.svg"
               width={200}
               height={200}
-              alt="Shopping Bags"
+              alt="24/7 Support"
             />
             <div>
               <h2 className="font-semibold text-xl md:text-2xl">
-                Lifetime Validity
+                24/7 Support
               </h2>
-
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Excepturi inventore facere suscipit unde architecto aliquid
-                mollitia molestias dicta, a molestiae!
+                Our dedicated support team is available 24/7 to resolve any
+                issues quickly and keep your operations running smoothly.
               </p>
             </div>
           </div>
@@ -35,17 +35,15 @@ const WhyUs = () => {
               src="https://api.iconify.design/fluent-emoji/bullseye.svg"
               width={200}
               height={200}
-              alt="Shopping Bags"
+              alt="Cutting-edge Solutions"
             />
             <div>
-              <h2 className="font-semibold text-xl md:text-2xl-">
-                Achievements
+              <h2 className="font-semibold text-xl md:text-2xl">
+                Cutting-edge Solutions
               </h2>
-
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Excepturi inventore facere suscipit unde architecto aliquid
-                mollitia molestias dicta, a molestiae!
+                We leverage the latest technologies and innovative solutions to
+                address your IT challenges and drive growth.
               </p>
             </div>
           </div>
@@ -55,17 +53,15 @@ const WhyUs = () => {
               src="https://api.iconify.design/fluent-emoji/dollar-banknote.svg"
               width={200}
               height={200}
-              alt="Shopping Bags"
+              alt="Cost-Effective"
             />
             <div>
               <h2 className="font-semibold text-xl md:text-2xl">
-                Pocket Friendly
+                Cost-Effective
               </h2>
-
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Excepturi inventore facere suscipit unde architecto aliquid
-                mollitia molestias dicta, a molestiae!
+                Our services are designed to be cost-effective, providing high
+                value without compromising on quality.
               </p>
             </div>
           </div>
@@ -74,16 +70,16 @@ const WhyUs = () => {
               src="https://api.iconify.design/fluent-emoji/wrapped-gift.svg"
               width={200}
               height={200}
-              alt="Shopping Bags"
+              alt="Customizable Packages"
             />
             <div>
               <h2 className="font-semibold text-xl md:text-2xl">
-                Can be sent as a Gift
+                Customizable Packages
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Excepturi inventore facere suscipit unde architecto aliquid
-                mollitia molestias dicta, a molestiae!
+                We offer customizable service packages tailored to meet the
+                unique needs of your business, ensuring you receive the right
+                solutions.
               </p>
             </div>
           </div>
