@@ -51,23 +51,6 @@ const FooterV3 = () => {
         </div>
       </div>
 
-      <div className="mt-8 text-center">
-        <p className="text-sm text-white">
-          Get in touch with us for any queries or feedback:
-        </p>
-        <div className="flex items-center justify-center mt-4">
-          <input
-            type="email"
-            placeholder="Your email"
-            className="py-2 px-4 mr-2 border border-teal-800 rounded-md focus:outline-none"
-          />
-          {/* <button className="bg-teal-800 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none">
-            Submit
-          </button> */}
-          <Button variant={"secondary"}>Submit</Button>
-        </div>
-      </div>
-
       <div className="mt-8 text-center text-white">
         &copy; {new Date().getFullYear()} {SITE_CONFIG.brandName}. All rights
         reserved.

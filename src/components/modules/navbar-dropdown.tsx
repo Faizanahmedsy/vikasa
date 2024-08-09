@@ -15,6 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { SITE_CONFIG } from "../../../site.config";
+import { usePathname } from "next/navigation";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -60,47 +61,44 @@ export const NavItems = [
     href: "/",
   },
   {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Blog",
+    href: "/blogs",
+  },
+  {
     title: "About Us",
     href: "/about",
   },
-  // {
-  //   title: "Services",
-  //   href: "/services",
-  // },
-  // {
-  //   title: "Projects",
-  //   href: "/projects",
-  // },
-  // {
-  //   title: "Testimonials",
-  //   href: "/testimonials",
-  // },
-  // {
-  //   title: "Blog/News",
-  //   href: "/blogs",
-  // },
-  // {
-  //   title: "Careers",
-  //   href: "/careers",
-  // },
+
+  {
+    title: "Careers",
+    href: "/careers",
+  },
   {
     title: "Contact Us",
     href: "/contact",
   },
-  // {
-  //   title: "FAQ",
-  //   href: "/faq",
-  // },
 ];
 
 export function NavigationMenuDemo() {
+  const pathname = usePathname();
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {NavItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <Link href={item.href} passHref legacyBehavior>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors  hover:text-violet-500 ",
+                  pathname === item.href
+                    ? " bg-violet-100 text-violet-500 font-medium rounded-lg"
+                    : "text-muted-foreground"
+                )}
+              >
                 {item.title}
               </NavigationMenuLink>
             </Link>

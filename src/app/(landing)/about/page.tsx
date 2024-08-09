@@ -22,8 +22,8 @@ export default function AboutUSPage() {
 
   return (
     <>
-      <Wrapper>
-        <TextV1 className="leading-2 tracking-tight">
+      <Wrapper className="md:pb-0">
+        <TextV1 className="leading-2 tracking-tight z-50">
           At Vikasa, we specialize in delivering top-notch IT services. Our team
           is dedicated to helping businesses succeed in the digital age.
         </TextV1>
@@ -34,7 +34,7 @@ export default function AboutUSPage() {
             </div>
           ))}
         </div>
-        <section>
+        {/* <section>
           <div className="text-center">
             <H2>Meet Our Expert Team</H2>
           </div>
@@ -55,10 +55,9 @@ export default function AboutUSPage() {
               </Card>
             ))}
           </div>
-        </section>
+        </section> */}
       </Wrapper>
-
-      <section className="bg-slate-900 md:py-10 md:px-32 px-10 py-5 ">
+      {/* <section className="bg-slate-900 md:py-10 md:px-32 px-10 py-5 ">
         <div className="text-center">
           <H2 className="text-blue-600">History & Milestones</H2>
         </div>
@@ -151,9 +150,29 @@ export default function AboutUSPage() {
             </li>
           </ol>
         </div>
-      </section>
-
+      </section> */}
       <Wrapper>
+        <section className="">
+          <p className="md:text-2xl text-lg font-medium border md:p-10 p-5 rounded-md bg-brand text-blue-50">
+            Welcome to Future Globe Business Solutions, where{" "}
+            <span className="text-white px-1 border-b border-b-white">
+              innovation meets expertise
+            </span>{" "}
+            in the realm of recruitment. Our comprehensive services are designed
+            to cater to the unique needs of businesses across multiple
+            industries. By leveraging our{" "}
+            <span className="text-white px-1 border-b border-b-white">
+              extensive network
+            </span>{" "}
+            and{" "}
+            <span className="text-white px-1 border-b border-b-white">
+              cutting-edge technology
+            </span>{" "}
+            , we connect you with the talent that drives success and growth
+          </p>
+        </section>
+      </Wrapper>
+      <Wrapper className="md:pt-0">
         <section>
           <div className="text-center">
             <H2>Life at Vikasa</H2>

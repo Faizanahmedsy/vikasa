@@ -9,44 +9,28 @@ import { toast } from "sonner";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function HeroFormCenterAlignedWithAForm() {
+  const form = useRef();
   const [msg, setMsg] = useState("");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
 
-  const token = "6801125870:AAHwsn1kiU5wHs3gN_JER-sbbMevT-mYw0s";
-
-  const telegramApi = useMutation({
-    mutationFn: async (data: { chat_id: string; text: string }) => {
-      const response = await fetch(
-        `https://api.telegram.org/${token}/sendMessage`,
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    },
-    onSuccess: (data) => {
-      console.log(data);
-      toast.success("Message sent successfully");
-    },
-  });
-
   const handleSubmit = () => {
     console.log(nameRef.current?.value);
     console.log(emailRef.current?.value);
 
-    telegramApi.mutate({
-      chat_id: "-1002128891802",
-      text: `Name: ${nameRef.current?.value} Email: ${emailRef.current?.value} Message: ${msg}`,
-    });
+    // emailjs
+    //   .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+    //     publicKey: "YOUR_PUBLIC_KEY",
+    //   })
+    //   .then(
+    //     () => {
+    //       console.log("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error.text);
+    //     }
+    //   );
   };
 
   return (
@@ -65,56 +49,7 @@ export default function HeroFormCenterAlignedWithAForm() {
               </h1>
             </div>
             {/* End Title */}
-            {/* Avatar Group */}
-            <div className="sm:flex sm:justify-center sm:items-center text-center sm:text-start">
-              <div className="flex-shrink-0 pb-5 sm:flex sm:pb-0 sm:pe-5">
-                {/* Avatar Group */}
-                <div className="flex justify-center -space-x-3">
-                  <Avatar className="h-8 w-8 ">
-                    <AvatarImage
-                      src="https://github.com/shadcn.png"
-                      alt="@shadcn"
-                    />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="h-8 w-8 ">
-                    <AvatarImage
-                      src="https://github.com/shadcn.png"
-                      alt="@shadcn"
-                    />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="h-8 w-8 ">
-                    <AvatarImage
-                      src="https://github.com/shadcn.png"
-                      alt="@shadcn"
-                    />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="h-8 w-8 ">
-                    <AvatarImage
-                      src="https://github.com/shadcn.png"
-                      alt="@shadcn"
-                    />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                  <span className="z-10 inline-flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-muted-foreground bg-background">
-                    <span className="text-xs font-medium leading-none uppercase">
-                      7k+
-                    </span>
-                  </span>
-                </div>
-                {/* End Avatar Group */}
-              </div>
-              <div className="border-t sm:border-t-0 sm:border-s  w-32 h-px sm:w-auto sm:h-full mx-auto sm:mx-0" />
-              <div className="pt-5 sm:pt-0 sm:ps-5">
-                <div className="text-lg font-semibold">Trust pilot</div>
-                <div className="text-sm text-muted-foreground">
-                  Rated best over 37k reviews
-                </div>
-              </div>
-            </div>
-            {/* End Avatar Group */}
+
             {/* Form */}
             <div>
               <div className="max-w-2xl mx-auto">
